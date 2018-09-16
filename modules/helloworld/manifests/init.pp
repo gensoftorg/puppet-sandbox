@@ -21,5 +21,4 @@ class helloworld {
     mode    => '0666',
     content => "world\n",
   }
-
 }
