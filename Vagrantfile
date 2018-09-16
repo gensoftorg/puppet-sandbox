@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-domain = 'example.com'
+domain = 'mypuppet.com'
 box = 'ubuntu/trusty64'
 ram = 512
 
