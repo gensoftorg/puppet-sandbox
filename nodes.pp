@@ -15,7 +15,7 @@ node 'client1' {
     owner   => 'root',
     group   => 'root',
     mode    => '0666',
-    content => "Hello world\n",
+    content => "world\n",
   }
   package { 'nginx-full':
     ensure => 'present',
@@ -23,7 +23,7 @@ node 'client1' {
   service { 'nginx':
     ensure  => 'running',
     enable  => true,
-    require => Package['nginx'],
+    require => Package['nginx-full'],
   }
 }
 
