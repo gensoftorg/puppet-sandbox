@@ -25,6 +25,10 @@ node 'client1' {
     enable  => true,
     require => Package['nginx-full'],
   }
+  exec{"file":
+    command => "/usr/bin/wget -q http://localhost:8081/artifactory/maven-local/com/mysampleapp/SampleWebApplication/1.0-SNAPSHOT/SampleWebApplication-1.0-20180930.035551-1.war -O SampleWebApplication.war",
+    creates => SampleWebApplication.war,
+  }
 }
 
-node 'client2' {}
+# node 'client2' {}
