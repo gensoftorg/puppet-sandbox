@@ -1,3 +1,4 @@
 modules/*
 .vagrant
 .idea
+*.iml
