@@ -9,9 +9,9 @@ ram = 512
 puppet_nodes = [
   {:hostname => 'puppet',  :ip => '172.16.32.10', :box => box, :fwdhost => 8140, :fwdguest => 8140, :ram => ram},
   {:hostname => 'client1', :ip => '172.16.32.11', :box => box},
-{:hostname => 'client2', :ip => '172.16.32.12', :box => winbox},
+{:hostname => 'client2', :ip => '172.16.32.12', :box => box},
+#{:hostname => 'client2', :ip => '172.16.32.12', :box => winbox},
 ]
-#{:hostname => 'client2', :ip => '172.16.32.12', :box => box},
 
 Vagrant.configure("2") do |config|
   puppet_nodes.each do |node|
